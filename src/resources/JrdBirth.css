@@ -1,0 +1,21 @@
+.training-glow {
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.1), 0 0 40px rgba(255, 193, 7, 0.05);
+  transition: box-shadow 1s ease-in-out;
+}
+
+.animate-training {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255, 193, 7, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.15);
+  }
+}

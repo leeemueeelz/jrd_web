@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
 
-import page1 from "../src/images/jrd_1.jpeg";
-import page2 from "../src/images/jrd_2.jpeg";
-import page3 from "../src/images/jrd_3.jpeg";
-import page4 from "../src/images/jrd_4.jpeg";
-import page5 from "../src/images/jrd_5.jpeg";
-import page6 from "../src/images/jrd_6.jpeg";
-import page7 from "../src/images/jrd_7.jpeg";
+import page1 from "../resources/images/jrd_1.jpeg";
+import page2 from "../resources/images/jrd_2.jpeg";
+import page3 from "../resources/images/jrd_3.jpeg";
+import page4 from "../resources/images/jrd_4.jpeg";
+import page5 from "../resources/images/jrd_5.jpeg";
+import page6 from "../resources/images/jrd_6.jpeg";
+import page7 from "../resources/images/jrd_7.jpeg";
 
 const pages = [page1, page2, page3, page4, page5, page6, page7];
 

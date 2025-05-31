@@ -1,6 +1,6 @@
 
 import React from "react";
-import roadmap from "../src/images/roadmap.jpg";
+import roadmap from "../resources/images/roadmap.jpg";
 
 const Roadmap = () => (
   <section className="section text-center bg-dark bg-opacity-75">
