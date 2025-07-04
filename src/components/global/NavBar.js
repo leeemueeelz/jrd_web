@@ -1,6 +1,7 @@
 
 import React, {useState} from "react";
-import coin from "../../resources/images/bsclogo.png"
+import coin from "../../resources/images/bsclogo.png";
+import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
     
@@ -29,7 +30,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul className="navbar-nav text-end">
             <li className="nav-item">
-            <a className="nav-link" href="#home">Home</a>
+                <Link to="/" className={`nav-link ${location.pathname === "/" ? "text-warning" : ""}`}>Home</Link>
             </li>
             <li className="nav-item">
             <a className="nav-link" href="#how">How to work</a>

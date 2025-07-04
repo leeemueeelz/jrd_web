@@ -1,7 +1,7 @@
 
 import { React, useState } from "react";
-import telegramIcon from "../resources/images/tlgmy.png";
-import telegramHoverIcon  from "../resources/images/tlgmb.png";
+import telegramIcon from "../../resources/images/tlgmy.png";
+import telegramHoverIcon  from "../../resources/images/tlgmb.png";
 
 const CTA = () => {
   const [icon, setIcon] = useState(telegramIcon);
