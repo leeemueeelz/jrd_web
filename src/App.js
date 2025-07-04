@@ -13,10 +13,12 @@ import Roadmap from "./components/Roadmap";
 import CTA from "./components/CTA";
 import TokenEconomy from "./components/TokenEconomy";
 import JrdBirth from "./components/JrdBirth";
+import NavBar from "./components/global/NavBar";
 
 const App = () => {
   return (
     <div className="app-wrapper text-white">
+      <NavBar />
       <Hero />
       {/*<Lore />*/}
       <JrdBirth />
