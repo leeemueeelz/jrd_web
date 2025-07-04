@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./resources/App.css";
 import "./resources/animations.css";
 import "./resources/JrdBirth.css";
-import NavBar from "./components/global/NavBar";
+import NavBar from "./components/Global/NavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/index";
 
