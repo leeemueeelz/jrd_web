@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import logo from "../../resources/images/jrd_wb.png"; // ruta relativa al archivo
+import logo from "../../resources/images/jrd_wb.png";
 import { FaCoins, FaRocket, FaSyncAlt, FaMagic } from 'react-icons/fa';
 
 const Hero = () => {
@@ -10,7 +10,7 @@ const Hero = () => {
   <div className="container">
     <div className="row align-items-center">
       <div className="col-lg-6 mb-5 mb-lg-0">
-        <h1 className="display-4 fw-bold">Turns Prompts Into Profit!</h1>
+        <h1 className="display-4 fw-bold mt-4">Turns Prompts Into Profit!</h1>
         <img
           src={logo}
           alt="JRD Logo"

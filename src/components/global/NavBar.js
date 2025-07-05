@@ -1,71 +1,95 @@
-
-import React, {useState} from "react";
-import coin from "../../resources/images/bsclogo.png";
-import { Link, useLocation, useNavigate  } from "react-router-dom";
+import React from "react";
+import coin from "../../resources/images/jrdlogock.png";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Collapse from "bootstrap/js/dist/collapse";
 
 const NavBar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
 
-    const location = useLocation();
-    const navigate = useNavigate();
-
-    const handleHomeClick = (e) => {
+  const handleHomeClick = (e) => {
     if (location.pathname === "/") {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" }); // o navigate(0) para refrescar
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-    };
-    const handleGalleryClick = (e) => {
+    toggleMenu();
+  };
+
+  const handleGalleryClick = (e) => {
     if (location.pathname === "/gallery") {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-    };
+    toggleMenu();
+  };
 
-        
-    const [menuOpen, setMenuOpen] = useState(false);
-    const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-    };
+  const toggleMenu = () => {
+    const navbarCollapse = document.getElementById("navbarNav");
+    if (navbarCollapse) {
+      const bsCollapse = Collapse.getInstance(navbarCollapse) || new Collapse(navbarCollapse);
+      navbarCollapse.classList.contains("show") ? bsCollapse.hide() : bsCollapse.show();
+    }
+  };
 
-    return (
+  const staticLinkProps = {
+    className: "nav-link text-white text-decoration-none",
+    onMouseEnter: (e) => (e.target.style.textDecoration = "underline"),
+    onMouseLeave: (e) => (e.target.style.textDecoration = "none"),
+    onClick: toggleMenu,
+  };
+
+  return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">
-        <div className="container-fluid">
-            <a className="navbar-brand" href="#home">
-            <img src={coin} alt="JRD Logo" style={{ height: "40px" }} />
-            </a>
-            <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            >
-            <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul className="navbar-nav text-end">
-                    <li className="nav-item">
-                        <Link to="/" onClick={handleHomeClick} className={`nav-link ${location.pathname === "/" ? "text-warning border-bottom border-warning" : ""}`}>Home</Link>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link" href="#how">How to work</a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link" href="#tokens">JRD & JRDT</a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/gallery" onClick={handleGalleryClick} className={`nav-link ${location.pathname === "/gallery" ? "text-warning border-bottom border-warning" : ""}`}>Raccon's Gallery</Link>
-                    </li>
-                </ul>
-            </div>
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#home">
+          <img src={coin} alt="JRD Logo" style={{ height: "51px" }} />
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          aria-label="Toggle navigation"
+          onClick={toggleMenu}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav text-end">
+            <li className="nav-item">
+              <Link
+                to="/"
+                onClick={handleHomeClick}
+                className={`nav-link ${
+                  location.pathname === "/" ? "text-warning border-bottom border-warning" : "text-white"
+                }`}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <a href="#how" {...staticLinkProps}>How to work</a>
+            </li>
+            <li className="nav-item">
+              <a href="#tokens" {...staticLinkProps}>JRD & JRDT</a>
+            </li>
+            <li className="nav-item">
+              <a href="#about" {...staticLinkProps}>About Us</a>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/gallery"
+                onClick={handleGalleryClick}
+                className={`nav-link ${
+                  location.pathname === "/gallery" ? "text-warning border-bottom border-warning" : "text-white"
+                }`}
+              >
+                Raccon's Gallery
+              </Link>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-    );
+  );
 };
 
 export default NavBar;
