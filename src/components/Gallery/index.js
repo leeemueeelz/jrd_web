@@ -18,7 +18,7 @@ const index = () => {
 
   return (
     <div className="container py-5 gallery-wrapper">
-      <h2 className="text-center mb-4 mt-5 text-center text-warning">RACCON GALLERY</h2>
+      <h1 className="text-center mb-4 mt-5 text-center text-warning levitate">RACCON GALLERY</h1>
       <div className="row g-3">
         {images.map((img, index) => (
           <div className="col-6 col-sm-4 col-md-3" key={index}>
