@@ -42,7 +42,7 @@ const NavBar = () => {
             <a className="nav-link" href="#about">About Us</a>
             </li>
             <li className="nav-item">
-            <a className="nav-link" href="#gallery">Raccon's Gallery</a>
+                <Link to="/gallery" className={`nav-link ${location.pathname === "/gallery" ? "text-warning" : ""}`}>Raccon's Gallery</Link>
             </li>
         </ul>
         </div>

@@ -123,3 +123,7 @@ button:hover + .page-img,
     text-align: justify !important;
   }
 }
+
+.btn-dark {
+  border: 0.5px solid #fff;
+}

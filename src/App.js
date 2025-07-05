@@ -7,6 +7,7 @@ import "./resources/JrdBirth.css";
 import NavBar from "./components/Global/NavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/index";
+import Gallery from "./components/Gallery/index";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </div>
   );
