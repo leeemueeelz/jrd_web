@@ -14,6 +14,7 @@ const App = () => {
   return (
     <div className="app-wrapper text-white">
       <NavBar />
+      <br/><br/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
