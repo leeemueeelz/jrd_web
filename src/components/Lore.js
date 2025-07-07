@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../resources/images/jrd_wb.png";
 import img1 from "../resources/images/jrd_1.jpeg";
 import img2 from "../resources/images/jrd_2.jpeg";
 import img3 from "../resources/images/jrd_3.jpeg";
@@ -37,25 +38,29 @@ const Lore = () => {
     <div className="container my-5">
       <div className="row justify-content-center align-items-start position-relative">
         {/* LORE SOLO EN PC */}
-        <div className="col-md-4 d-none d-md-block">
-          <div className="text-white p-3 bg-dark rounded shadow">
-            <h5>Raccoon Lore</h5>
-            <p className="mb-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non fermentum odio. Sed fringilla velit vel sapien ornare.
-            </p>
-          </div>
+        <div className="col-lg-6 mb-5 mb-lg-0">
+          <h1 className="display-4 fw-bold mt-4 no-wrap-mobile text-center">Japanese Raccon Dog (狸)</h1>
+          <img
+            src={logo}
+            alt="JRD Logo"
+            className="mb-2 levitate d-block mx-auto"
+            style={{ width: "170px", height: "auto" }}
+          />
+          <p className="mt-1 text-justify-mobile">
+              Welcome to the World of <b>JRD</b><br/><br/>
+
+              In a world where AI is within everyone’s reach, the opportunity to earn from home has never been more real.
+
+              Imagine creating original, impactful, and monetizable content in minutes — no experience needed, just your idea.
+
+              At the heart of it all is Raccoon, the spirit of the project. A mischievous visionary with one goal: to help you turn creativity into real value.
+
+              Join the new revolution in content creation.
+          </p>
         </div>
 
         {/* COMIC */}
         <div className="col-12 col-md-6 d-flex flex-column align-items-center position-relative">
-          {/* LORE MOBILE */}
-          <div className="d-md-none text-white mb-3 p-2 bg-dark rounded shadow w-100">
-            <h5>Raccoon Lore</h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
-
           <div className="flip-wrapper">
             <div className={`flip-page ${flipDirection}`}>
               <img

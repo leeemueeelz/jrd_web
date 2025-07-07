@@ -55,3 +55,26 @@ img {
   border-width: 20px 0 20px 25px;
   border-color: transparent transparent transparent #ffc107;
 }
+
+@media (max-width: 768px) {
+  .no-wrap-mobile {
+    white-space: nowrap;
+    font-size: 1.2rem;
+  }
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .flip-btn.left {
+    left: 0;
+  }
+
+  .flip-btn.right {
+    right: 0;
+  }
+}

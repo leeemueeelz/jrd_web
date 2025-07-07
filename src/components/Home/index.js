@@ -9,7 +9,7 @@ const index = () => {
   return (
     <div className="app-wrapper text-white">
       <Lore />
-      <Hero />
+      {/*<Hero />*/}
       <JrdBirth />
       <CTA />
       <footer className="text-center py-4 bg-dark bg-opacity-75">
