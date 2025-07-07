@@ -1,0 +1,57 @@
+.flip-wrapper {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  cursor: pointer;
+  position: relative;
+}
+
+.flip-page {
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.flip-page.flip-right {
+  transform: rotateY(180deg);
+}
+
+.flip-page.flip-left {
+  transform: rotateY(-180deg);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.flip-btn {
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  background: none;
+  cursor: pointer;
+  z-index: 2;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.flip-btn:hover {
+  opacity: 1;
+}
+
+.flip-btn.left {
+  left: -20px;
+  border-width: 20px 25px 20px 0;
+  border-color: transparent #ffc107 transparent transparent;
+}
+
+.flip-btn.right {
+  right: -20px;
+  border-width: 20px 0 20px 25px;
+  border-color: transparent transparent transparent #ffc107;
+}

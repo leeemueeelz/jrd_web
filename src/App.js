@@ -8,6 +8,7 @@ import NavBar from "./components/global/NavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/index";
 import Gallery from "./components/Gallery/index";
+import "./resources/Lore.css";
 
 const App = () => {
   return (
