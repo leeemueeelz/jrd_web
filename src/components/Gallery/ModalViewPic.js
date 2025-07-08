@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { Modal } from "bootstrap";
 import { FaRegCopy } from 'react-icons/fa';
-import xIcon from "../../resources/images/iconx.png";
+import xIcon from "../../resources/images/iconxb.png";
 
 const ModalViewPic = ({ imgSrc, onClose }) => {
   const modalRef = useRef(null);
