@@ -122,12 +122,6 @@ const JrdBirth = () => {
           </div>
         </div>
 
-        <hr className="border-warning my-4" />
-
-        <h4 className="text-warning text-center">Coming Soon</h4>
-        <p className="lead text-justify small-text">
-          Users will be able to connect the bot to YouTube, extract moodboards, scenes, character behaviors — and even upload new material if not already indexed in our library.
-        </p>
       </div>
     </section>
   );
