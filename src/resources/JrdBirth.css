@@ -36,3 +36,20 @@
     box-shadow: 0 0 8px rgba(255, 193, 7, 0.15);
   }
 }
+
+@media (max-width: 768px) {
+  .training-glow {
+    background-image: none !important;
+    background: linear-gradient(
+      180deg,
+      #1f0c42 0%,
+      #302b2b 50%,
+      #0080ff 100%
+    ) !important;
+    background-attachment: scroll !important;
+  }
+
+  .training-glow::before {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+}
