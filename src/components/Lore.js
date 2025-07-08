@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import logo from "../resources/images/jrd_wb.png";
+import prtd from "../resources/images/prtd.jpeg";
+import cnprtdprtd from "../resources/images/cnprtd.jpeg";
 import img1 from "../resources/images/jrd_1.jpeg";
 import img2 from "../resources/images/jrd_2.jpeg";
 import img3 from "../resources/images/jrd_3.jpeg";
@@ -8,7 +10,7 @@ import img5 from "../resources/images/jrd_5.jpeg";
 import img6 from "../resources/images/jrd_6.jpeg";
 import img7 from "../resources/images/jrd_7.jpeg";
 
-const images = [img1, img2, img3, img4, img5, img6, img7];
+const images = [prtd, cnprtdprtd, img1, img2, img3, img4, img5, img6, img7];
 
 const Lore = () => {
   const [currentPage, setCurrentPage] = useState(0);

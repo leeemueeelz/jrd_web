@@ -48,19 +48,19 @@ const ModalViewPic = ({ imgSrc, onClose }) => {
           <div className="modal-body text-center">
             <img src={imgSrc} alt="Selected" className="img-fluid rounded" />
           </div>
-          <div className="modal-footer border-0 d-flex justify-content-between">
-            <div className="d-flex gap-2">
-              <button className="btn btn-outline-light" onClick={handleCopy}>
-                <FaRegCopy className="me-2" />  Hashtags + URL
-              </button>
-              <button className="btn btn-dark" onClick={handleTwitterShare}>
-                <img src={xIcon} style={{ height: "20px", width: "20px" }} /> <span className="text-warning">Share on X</span>
-              </button>
-            </div>
+        <div className="modal-footer border-0 d-flex justify-content-center">
+          <div className="d-flex gap-2 flex-wrap justify-content-center">
+            <button className="btn btn-outline-light" onClick={handleCopy}>
+              <FaRegCopy className="me-2" /> Hashtags + URL
+            </button>
+            <button className="btn btn-dark px-4" onClick={handleTwitterShare}>
+              <span className="text-warning">Share on X</span>
+            </button>
             <button type="button" className="btn btn-warning" data-bs-dismiss="modal">
               Close
             </button>
           </div>
+        </div>
         </div>
       </div>
     </div>

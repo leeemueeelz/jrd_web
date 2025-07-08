@@ -42,7 +42,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand" href="#home">
-          <img src={coin} alt="JRD Logo" style={{ height: "51px" }} />
+          <img src={coin} alt="JRD Logo" style={{ maxHeight: "51px", height: "auto", width: "auto" }} />
         </a>
         <button
           className="navbar-toggler"
