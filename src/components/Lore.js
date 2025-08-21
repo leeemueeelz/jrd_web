@@ -41,7 +41,7 @@ const Lore = () => {
       <div className="row justify-content-center align-items-start position-relative">
         {/* LORE SOLO EN PC */}
         <div className="col-lg-6 mb-5 mb-lg-0">
-          <h1 className="display-4 fw-bold no-wrap-mobile text-center">Japanese Raccon Dog (狸)</h1>
+          <h1 className="text-center">Japanese Raccon Dog <br/>狸</h1>
           <img
             src={logo}
             alt="JRD Logo"
