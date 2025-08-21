@@ -133,3 +133,41 @@ button:hover + .page-img,
   box-shadow: 0 0 5px #ffc107, 0 0 10px #ffc107, 0 0 15px #ffc107;
   transition: box-shadow 0.3s ease-in-out;
 }
+
+/*Roadmap*/
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px #ffc107;
+  }
+  50% {
+    box-shadow: 0 0 25px #ffc107, 0 0 35px #ffc107;
+  }
+  100% {
+    box-shadow: 0 0 10px #ffc107;
+  }
+}
+
+.glow-yellow-animated {
+  animation: glowPulse 2s infinite;
+  border-radius: 8px;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px #ffc107;
+  }
+  50% {
+    box-shadow: 0 0 25px #ffc107, 0 0 35px #ffc107;
+  }
+  100% {
+    box-shadow: 0 0 10px #ffc107;
+  }
+}
+
+.glow-yellow-animated {
+  animation: glowPulse 2s infinite;
+  border-radius: 8px;
+}
+
+/*Roadmap*/

@@ -31,11 +31,11 @@ const Roadmap = () => {
       <h2 className="text-warning display-5 fw-bold mb-4 levitate">ROADMAP</h2>
       <p className="text-light mb-4">Explore the raccoon's path to global domination, phase by phase.</p>
 
-      <div className="position-relative d-flex justify-content-center align-items-center glow-yellow ">
+      <div className="position-relative d-flex justify-content-center align-items-center glow-yellow-animated">
         <img
           src={images[current]}
           alt={`step${current + 1}`}
-          className="img-fluid rounded shadow roadmap-image animate__animated animate__fadeIn"
+          className="img-fluid rounded shadow roadmap-image animate__animated animate__fadeIn img-fluid"
           style={{ maxWidth: "100%", height: "auto", transition: "0.5s" }}
         />
       </div>
