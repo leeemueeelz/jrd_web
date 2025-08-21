@@ -66,13 +66,10 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a href="#how" {...staticLinkProps}>How to work</a>
+              <a href="#how" {...staticLinkProps}>Abot the Bot</a>
             </li>
             <li className="nav-item">
-              <a href="#tokens" {...staticLinkProps}>JRD & JRDT</a>
-            </li>
-            <li className="nav-item">
-              <a href="#about" {...staticLinkProps}>About Us</a>
+              <a href="#about" {...staticLinkProps}>C.A</a>
             </li>
             <li className="nav-item">
               <Link
