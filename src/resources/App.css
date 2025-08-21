@@ -171,3 +171,22 @@ button:hover + .page-img,
 }
 
 /*Roadmap*/
+
+/*Text to click (3) in icon jrd home*/
+.text-glow-light {
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  -webkit-text-stroke: 0.5px black;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.text-glow-light:hover {
+  color: #ffc107;
+  text-shadow: 0 0 6px rgba(255, 193, 7, 0.7);
+  cursor: pointer;
+}
+
+.text-glow-light:active {
+  text-shadow: 0 0 12px white, 0 0 20px white;
+}

@@ -27,7 +27,7 @@ const Roadmap = () => {
   }, []);
 
   return (
-    <div className="container py-4 text-center roadmap-section">
+    <div className="container py-4 text-center roadmap-section" id="Roadmap">
       <h2 className="text-warning display-5 fw-bold mb-4 levitate">ROADMAP</h2>
       <p className="text-light mb-4">Explore the raccoon's path to global domination, phase by phase.</p>
 

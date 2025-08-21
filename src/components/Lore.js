@@ -41,15 +41,42 @@ const Lore = () => {
       <div className="row justify-content-center align-items-start position-relative">
         {/* LORE SOLO EN PC */}
         <div className="col-lg-6 mb-5 mb-lg-0">
-          <h1 className="text-center">Japanese Raccon Dog <br/>狸</h1>
-          <img
-            src={logo}
-            alt="JRD Logo"
-            className="mb-2 levitate d-block mx-auto"
-            style={{ width: "170px", height: "auto" }}
-          />
+          <h2 className="text-center">Japanese Raccon Dog - 狸</h2>
+          <div className="d-flex justify-content-center align-items-center position-relative mb-3">
+            <div
+              className="text-warning position-absolute start-0 translate-middle-y"
+              style={{ top: "50%" }}
+              onClick={() => document.getElementById("JRD birth")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              <h2 className="text-glow-light">JRD Birth</h2>
+            </div>
+
+            <img
+              src={logo}
+              alt="JRD Logo"
+              className="mb-1 levitate d-block mx-auto"
+              style={{ width: "170px", height: "auto" }}
+            />
+
+            <div
+              className="lore-card position-absolute end-0 translate-middle-y"
+              style={{ top: "50%" }}
+              onClick={() => document.getElementById("Roadmap")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              <h2 className="text-glow-light">Roadmap</h2>
+            </div>
+          </div>
+
+
+          <div
+            className="lore-card text-center mx-auto"
+            onClick={() => document.getElementById("CTA")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            <h2 className="text-glow-light">Community</h2>
+          </div>
           <p className="mt-1 text-justify-mobile">
-              Welcome to the World of <b>JRD</b><br/><br/>
+              <span className="text-warning">_______________________________________________<br/>
+                Welcome to the World of <b>JRD</b></span><br/><br/>
 
               In a world where AI is within everyone’s reach, the opportunity to earn from home has never been more real.
 
