@@ -128,3 +128,8 @@ button:hover + .page-img,
 .btn-dark {
   border: 0.5px solid #fff;
 }
+
+.glow-yellow {
+  box-shadow: 0 0 5px #ffc107, 0 0 10px #ffc107, 0 0 15px #ffc107;
+  transition: box-shadow 0.3s ease-in-out;
+}

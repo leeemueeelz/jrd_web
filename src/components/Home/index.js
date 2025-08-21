@@ -12,6 +12,7 @@ const index = () => {
       <Lore />
       {/*<Hero />*/}
       <JrdBirth />
+      <Roadmap/>
       <CTA />
     </div>
   );
