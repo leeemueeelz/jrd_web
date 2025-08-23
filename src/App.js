@@ -13,7 +13,7 @@ import Footer from "./components/global/Footer";
 
 const App = () => {
   return (
-    <div className="app-wrapper text-white">
+    <div className="text-white">
       <NavBar />
       <br/><br/>
       <Routes>

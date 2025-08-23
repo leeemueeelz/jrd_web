@@ -8,7 +8,7 @@ import Roadmap from './Roadmap';
 
 const index = () => {
   return (
-    <div className="app-wrapper text-white">
+    <div className="text-white">
       <Lore />
       {/*<Hero />*/}
       <JrdBirth />

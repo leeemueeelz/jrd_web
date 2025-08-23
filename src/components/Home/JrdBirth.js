@@ -3,7 +3,7 @@ import React from "react";
 const JrdBirth = () => {
   return (
     <section className="bg-dark text-light py-4 training-glow" id="JRD birth">
-      <div className="container animate-training">
+      <div className="container">
         <h2 className="text-warning display-5 fw-bold mb-3 text-center">JRD Birth</h2>
         <h3 className="text-light mb-3 text-center">How Our Content Creation Bot Was Born</h3>
 

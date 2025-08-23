@@ -4,17 +4,10 @@ body, html, #root {
   height: 100%;
   margin: 0;
   font-family: 'Archivo black', sans-serif;
-}
-
-.app-wrapper {
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
+  background-color: #000; /* negro o tu fondo deseado */
   background-image: url('./background_web.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 @keyframes float {
@@ -163,11 +156,6 @@ button:hover + .page-img,
   100% {
     box-shadow: 0 0 10px #ffc107;
   }
-}
-
-.glow-yellow-animated {
-  animation: glowPulse 2s infinite;
-  border-radius: 8px;
 }
 
 /*Roadmap*/

@@ -20,23 +20,6 @@
   z-index: -1;
 }
 
-
-.animate-training {
-  animation: pulseGlow 4s ease-in-out infinite;
-}
-
-@keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 8px rgba(255, 193, 7, 0.15);
-  }
-  50% {
-    box-shadow: 0 0 16px rgba(255, 193, 7, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 8px rgba(255, 193, 7, 0.15);
-  }
-}
-
 @media (max-width: 768px) {
   .training-glow {
     background-image: none !important;
