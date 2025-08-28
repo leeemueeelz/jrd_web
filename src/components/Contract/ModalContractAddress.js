@@ -91,7 +91,7 @@ const ModalContractAddress = ({ onClose }) => {
           </div>
           <div className="modal-footer border-0 d-flex justify-content-center">
               <button className="btn btn-dark px-4" onClick={handleCopyAddress}>
-                <span className="text-warning">{ContractAddressCopied}</span>
+                <FaRegCopy className="me-2" /> <span className="text-warning">{ContractAddressCopied}</span>
               </button>
             <div className="d-flex gap-2 flex-wrap justify-content-center">
               <button type="button" className="btn btn-warning" data-bs-dismiss="modal" onClick={closeModal}>

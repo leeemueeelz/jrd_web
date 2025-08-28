@@ -1,31 +1,30 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Modal } from "bootstrap";
 import { FaRegCopy } from 'react-icons/fa';
-import xIcon from "../../resources/images/iconxb.png";
 
 const ModalViewPic = ({ imgSrc, onClose }) => {
   const modalRef = useRef(null);
+  const [Copy, setCopy] = useState("Hashtags + URL")
 
   useEffect(() => {
-    if (modalRef.current) {
-      const modal = new Modal(modalRef.current);
-      modal.show();
+    if (!modalRef.current) return;
 
-      const handleHide = () => onClose?.();
-      modalRef.current.addEventListener("hidden.bs.modal", handleHide);
+    const modal = new Modal(modalRef.current);
+    modal.show();
 
-      return () => {
-        if (modalRef.current) {
-          modalRef.current.removeEventListener("hidden.bs.modal", handleHide);
-        }
-      };
-    }
+    const handleHide = () => onClose?.();
+    modalRef.current.addEventListener("hidden.bs.modal", handleHide);
+
+    return () => {
+      modalRef.current?.removeEventListener("hidden.bs.modal", handleHide);
+      modal.dispose();
+    };
   }, [imgSrc, onClose]);
 
   const handleCopy = () => {
     const text = `${window.location.origin}${imgSrc} #JRD #JapaneseRacconDog`;
     navigator.clipboard.writeText(text).then(() => {
-      alert("URL copiada al portapapeles.");
+      setCopy("URL copied to clipboard!");
     });
   };
 
@@ -51,7 +50,7 @@ const ModalViewPic = ({ imgSrc, onClose }) => {
         <div className="modal-footer border-0 d-flex justify-content-center">
           <div className="d-flex gap-2 flex-wrap justify-content-center">
             <button className="btn btn-outline-light" onClick={handleCopy}>
-              <FaRegCopy className="me-2" /> Hashtags + URL
+              <FaRegCopy className="me-2" /> {Copy}
             </button>
             <button className="btn btn-dark px-4" onClick={handleTwitterShare}>
               <span className="text-warning">Share on X</span>
