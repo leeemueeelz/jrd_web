@@ -1,11 +1,12 @@
-import React from "react";
+import { useState } from "react";
 import coin from "../../resources/images/jrdlogock.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Collapse from "bootstrap/js/dist/collapse";
+import ModalContractAddress from "../../components/Contract/ModalContractAddress";
 
 const NavBar = () => {
   const location = useLocation();
-  const navigate = useNavigate();
+  const [ShowModalContractAddress, setShowModalContractAddress] = useState(null);
 
   const handleHomeClick = (e) => {
     if (location.pathname === "/") {
@@ -38,7 +39,16 @@ const NavBar = () => {
     onClick: toggleMenu,
   };
 
+  const openModal = (param) => {
+    setShowModalContractAddress(param);
+  };
+
+  const closeModal = () => {
+    setShowModalContractAddress(null);
+  };
+  
   return (
+    <>
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand" href="#home">
@@ -66,10 +76,15 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a href="#how" {...staticLinkProps}>Abot the Bot</a>
+              <a href="#how" {...staticLinkProps}>+About</a>
             </li>
             <li className="nav-item">
-              <a href="#about" {...staticLinkProps}>C.A</a>
+              <button className={`nav-link ${ 
+                ShowModalContractAddress ? "text-warning border-bottom border-warning" : "text-white"}` }
+                onClick={() => openModal(true)}
+              >
+              Contract Address
+              </button>
             </li>
             <li className="nav-item">
               <Link
@@ -86,6 +101,8 @@ const NavBar = () => {
         </div>
       </div>
     </nav>
+    {ShowModalContractAddress && <ModalContractAddress onClose={closeModal} />}
+    </>
   );
 };
 

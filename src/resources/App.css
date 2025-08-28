@@ -178,3 +178,17 @@ button:hover + .page-img,
 .text-glow-light:active {
   text-shadow: 0 0 12px white, 0 0 20px white;
 }
+
+.contract-textarea {
+  background-color: #0d0d0d;   /* Fondo oscuro */
+  color: #ffc107;             /* Dorado (JRD) */
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  resize: none;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+.contract-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.6);
+}
