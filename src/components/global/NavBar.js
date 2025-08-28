@@ -79,12 +79,12 @@ const NavBar = () => {
               <a href="#how" {...staticLinkProps}>+About</a>
             </li>
             <li className="nav-item">
-              <button className={`nav-link ${ 
+              <Link className={`nav-link ${ 
                 ShowModalContractAddress ? "text-warning border-bottom border-warning" : "text-white"}` }
                 onClick={() => openModal(true)}
               >
               Contract Address
-              </button>
+              </Link>
             </li>
             <li className="nav-item">
               <Link
