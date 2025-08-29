@@ -10,21 +10,38 @@ const ModalContractAddress = ({ onClose }) => {
   const [ContractAddressCopied, setContractAddressCopied] = useState("Copy")
   const textAreaRef = useRef(null);
 
-  useEffect(() => {
-    if (!modalRef.current) return;
+useEffect(() => {
+  if (!modalRef.current) return;
 
-    const modal = new Modal(modalRef.current);
-    modal.show();
+  if (document.querySelector(".modal.show")) return;
 
-    const handleHide = () => onClose?.();
-    modalRef.current.addEventListener("hidden.bs.modal", handleHide);
+  const modal = new Modal(modalRef.current);
+
+  setTimeout(() => {
+    try {
+      modal.show();
+    } catch (error) {
+      console.warn(error);
+    }
+  }, 50);
+
+  const handleHide = () => {
+    onClose?.();
+
+    // clean backdrop
+    const backdrop = document.querySelector(".modal-backdrop");
+    if (backdrop) backdrop.remove();
+    document.body.classList.remove("modal-open");
+    document.body.style.paddingRight = null;
+  };
+
+  modalRef.current.addEventListener("hidden.bs.modal", handleHide);
 
     return () => {
       modalRef.current?.removeEventListener("hidden.bs.modal", handleHide);
       modal.dispose();
     };
   }, [onClose]);
-
 
   const closeModal = () => {
     document.activeElement.blur();
@@ -35,7 +52,7 @@ const ModalContractAddress = ({ onClose }) => {
       setContractAddressCopied("C.A copied");
 
       if (textAreaRef.current) {
-        textAreaRef.current.focus();
+        textAreaRef.current && textAreaRef.current.focus();
       }
     });
   };
@@ -78,8 +95,9 @@ const ModalContractAddress = ({ onClose }) => {
                     <p className="form-label text-light fw-bold">
                       ...Or copy Contract Address:
                     </p>
-                    <textarea 
+                    <textarea
                       ref={textAreaRef}
+                      id="TextContractAddress"
                       className="form-control contract-textarea text-center"
                       defaultValue={ca}
                       readOnly
