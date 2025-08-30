@@ -10,7 +10,7 @@ const CTA = () => {
   const [iconX, setIconX] = useState(xIcon);
 
   return (
-<section className="text-center section bg-black p-4 bg-opacity-75" id="CTA">
+<section className="text-center section bg-black p-4" id="CTA">
   <h2 className="mb-3">Join our community</h2>
   <p>Be a part of &gt; Build content &gt; Earn with JRD.</p>
 

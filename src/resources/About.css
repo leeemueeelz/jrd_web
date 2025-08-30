@@ -1,0 +1,83 @@
+/* Fondo oscuro y leve borde redondeado como la maqueta */
+.ecosystem-shadow {
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+}
+
+.about-wrapper {
+  background-color: #111111bb;
+  min-height: 100vh;
+  padding-top: 6rem;
+}
+
+/* Utilidades de texto claras */
+.text-light-50 { color: rgba(255,255,255,0.6) !important; }
+.text-light-65 { color: rgba(255,255,255,0.75) !important; }
+
+/* Cards oscuras (semi-transparente) */
+.card-dark {
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+}
+
+.btn-dark-subtle {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: rgba(255,255,255,0.08);
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: rgba(255,255,255,0.14);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: rgba(255,255,255,0.18);
+}
+
+/* Disposición de los mockups como en la imagen */
+.device {
+  max-width: 210px;
+  transform-origin: bottom center;
+}
+
+.device-iphone {
+  transform: translateX(-40px) translateY(20px) scale(1.02);
+  opacity: 0.95;
+}
+.device-android {
+  transform: translateX(40px) translateY(0px) scale(1);
+}
+
+/* Badges de tiendas sin borde */
+.store-badge img {
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
+}
+
+/* Responsivo: achicar teléfonos en pantallas chicas */
+@media (max-width: 991.98px) {
+  .device { max-width: 180px; }
+  .device-iphone { transform: translateX(-20px) translateY(10px) scale(1); }
+  .device-android { transform: translateX(20px) translateY(0) scale(0.98); }
+}
+@media (max-width: 575.98px) {
+  .device { max-width: 150px; }
+}
+
+/* Tip extra: si quieres resaltar los títulos con dorado JRD */
+h1, .h4 { letter-spacing: 0.2px; }
+
+.text-jrdt {
+    color: #097b44;
+}
+
+.fade-detail-jrd {
+  transition: opacity 0.6s ease, max-height 0.6s ease;
+  overflow: hidden;
+}
+
+.fade-detail-jrd.hide {
+  opacity: 0;
+  max-height: 0;
+  pointer-events: none;
+}
+
+.fade-detail-jrd.show {
+  opacity: 1;
+  max-height: 300px; /* Ajustá según el contenido */
+}

@@ -24,6 +24,14 @@ const NavBar = () => {
     toggleMenu();
   };
 
+  const handleAboutClick = (e) => {
+    if (location.pathname === "/about") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    toggleMenu();
+  };
+
   const toggleMenu = () => {
     const navbarCollapse = document.getElementById("navbarNav");
     if (navbarCollapse) {
@@ -76,7 +84,15 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a href="#how" {...staticLinkProps}>+About</a>
+              <Link
+                to="/about"
+                onClick={handleAboutClick}
+                className={`nav-link ${
+                  location.pathname === "/about" ? "text-warning border-bottom border-warning" : "text-white"
+                }`}
+              >
+                +About
+              </Link>
             </li>
             <li className="nav-item">
               <Link className={`nav-link ${ 
