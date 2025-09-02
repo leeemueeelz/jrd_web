@@ -3,10 +3,12 @@ import { Modal } from "bootstrap";
 import { FaRegCopy } from 'react-icons/fa';
 import DexScreenerIcon from "../../resources/icons/dexscreener.png";
 import JupagIcon from "../../resources/icons/jupag-logo.png";
+import useCountdownTimer from '../../helpers/useCountdownTimer';
+import { Oval } from '@agney/react-loading';
 
 const ModalContractAddress = ({ onClose }) => {
   const modalRef = useRef(null);
-  const ca = "6GC2a8DMenrEiZV6ngY8dq4GHsxhCgf9z38BS7sZN8tG"
+  const ca = 'Launch: September 13, 2025'
   const [ContractAddressCopied, setContractAddressCopied] = useState("Copy")
   const textAreaRef = useRef(null);
 
@@ -57,6 +59,11 @@ useEffect(() => {
     });
   };
 
+  /*calcuiate launch for set in textarea while...*/
+  const { timeLeft, progress, loading } = useCountdownTimer({
+    launchDateUTC: "2025-09-13T05:00:00Z",
+    startDateUTC: "2025-09-02T05:00:00Z",
+  });
 
   return (
     <div
@@ -95,13 +102,21 @@ useEffect(() => {
                     <p className="form-label text-light fw-bold">
                       ...Or copy Contract Address:
                     </p>
-                    <textarea
-                      ref={textAreaRef}
-                      id="TextContractAddress"
-                      className="form-control contract-textarea text-center"
-                      defaultValue={ca}
-                      readOnly
-                    ></textarea>
+                    {
+                      loading ?  <Oval width="50" color="#ffc107" className="mt-3" /> :
+                      <>
+                        <textarea
+                          ref={textAreaRef}
+                          id="TextContractAddress"
+                          className="form-control contract-textarea text-center"
+                          defaultValue={ca}
+                          readOnly
+                        ></textarea>
+                        <p className="small fw-light text-white-50 mt-2">
+                          {`days: ${ timeLeft.days || 0 }, hours: ${timeLeft.hours || 0}, minutes ${timeLeft.minutes || 0}, seconds: ${timeLeft.seconds || 0}`}
+                        </p>
+                      </>
+                    }
                   </div>
                 </div>
               </div>
