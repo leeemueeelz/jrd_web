@@ -22,14 +22,14 @@ const ModalViewPic = ({ imgSrc, onClose }) => {
   }, [imgSrc, onClose]);
 
   const handleCopy = () => {
-    const text = `${window.location.origin}${imgSrc} #JRD #JapaneseRacconDog`;
+    const text = `${window.location.origin}${imgSrc} #JRD #JapaneseRaccoonDog`;
     navigator.clipboard.writeText(text).then(() => {
       setCopy("URL copied to clipboard!");
     });
   };
 
   const handleTwitterShare = () => {
-    const tweetText = encodeURIComponent(`${window.location.origin}${imgSrc} #JRD #JapaneseRacconDog`);
+    const tweetText = encodeURIComponent(`${window.location.origin}${imgSrc} #JRD #JapaneseRaccoonDog`);
     const twitterURL = `https://x.com/intent/tweet?text=${tweetText}`;
     window.open(twitterURL, '_blank');
   };

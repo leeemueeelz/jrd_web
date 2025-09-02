@@ -59,7 +59,7 @@ const NavBar = () => {
     <>
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#home">
+        <a className="navbar-brand" href="/">
           <img src={coin} alt="JRD Logo" style={{ maxHeight: "51px", height: "auto", width: "auto" }} />
         </a>
         <button
@@ -110,7 +110,7 @@ const NavBar = () => {
                   location.pathname === "/gallery" ? "text-warning border-bottom border-warning" : "text-white"
                 }`}
               >
-                Raccon's Gallery
+                Raccoon's Gallery
               </Link>
             </li>
           </ul>

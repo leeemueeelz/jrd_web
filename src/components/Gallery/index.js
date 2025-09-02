@@ -18,7 +18,7 @@ const index = () => {
 
   return (
     <div className="container py-5 gallery-wrapper">
-      <h1 className="text-center mb-4 text-center text-warning levitate">Raccon's Gallery</h1>
+      <h1 className="text-center mb-4 text-center text-warning levitate">Raccoon's Gallery</h1>
       <p>We have an image gallery where our beloved raccoon plays some very famous roles or costumes. You can share the image via X or download it to use as an avatar in our group if you feel you belong. IT'S NOT NFT.</p>
       <div className="row g-3">
         {images.map((img, index) => (
