@@ -4,6 +4,7 @@ import CTA from "./CTA";
 import JrdBirth from "./JrdBirth";
 import Lore from './Lore';
 import Roadmap from './Roadmap';
+import Countdown from './Countdown';
 
 const index = () => {
   return (
@@ -12,6 +13,7 @@ const index = () => {
       <JrdBirth />
       <Roadmap/>
       <CTA />
+      <Countdown/>
     </div>
   );
 };
