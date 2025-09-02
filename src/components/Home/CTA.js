@@ -28,7 +28,7 @@ const CTA = () => {
     </a>
 
     <a
-      href="https://t.me/jrdtoken"
+      href="https://t.me/+FEK_kQpdiXI2ZmJh"
       target="_blank"
       rel="noreferrer"
       className="btn btn-outline-warning btn-lg d-inline-flex align-items-center gap-2"
