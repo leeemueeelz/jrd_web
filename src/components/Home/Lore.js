@@ -41,7 +41,7 @@ const Lore = () => {
       <div className="row justify-content-center align-items-start position-relative">
         {/* LORE SOLO EN PC */}
         <div className="col-lg-6 mb-5 mb-lg-0">
-          <h2 className="text-center">Japanese Raccon Dog - 狸</h2>
+          <h2 className="text-center">Japanese Raccoon Dog - 狸</h2>
           <div className="d-flex justify-content-center align-items-center position-relative mb-3">
             <div
               className="text-warning position-absolute start-0 translate-middle-y"
