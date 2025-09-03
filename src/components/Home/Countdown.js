@@ -38,16 +38,16 @@ const Countdown = () => {
 
   return (
     <div className={`countdown-overlay ${closing ? "fade-out" : "fade-in"}`}>
-      <div className="countdown-container levitate">
+      <div className="countdown-container levitate m-2">
         <button className="close-button text-warning" onClick={handleClose}>×</button>
         <div className="logo">🚀</div>
-        <h2>Launch: September 13, 2025</h2>
+        <h4>September 13, 2025</h4>
         <p>(GMT-5)</p>
         <img
           src={logo}
           alt="JRD Logo"
           className="mb-1 d-block mx-auto"
-          style={{ width: "170px", height: "auto" }}
+          style={{ width: "120px", height: "auto" }}
         />
         {
           loading ?  <Oval width="50" color="#ffc107" className="mt-3" /> : 

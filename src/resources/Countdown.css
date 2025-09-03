@@ -3,11 +3,11 @@
   color: white;
   background: linear-gradient(to right, #0d0d0d, #313d3d90);
   border-radius: 20px;
-  margin: auto;
   border: 0.5px solid #fff;
   width: 90%;
-  max-width: 600px;
-  padding: 20px 16px;
+  max-width: 360px;
+  padding: 10px 10px;
+  box-shadow: 0 0 5px #ffc107, 0 0 10px #ffc107, 0 0 15px #ffc107;
 }
 
 .logo {
@@ -27,7 +27,7 @@
 
 .countdown-timer span {
   display: block;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 }
 
