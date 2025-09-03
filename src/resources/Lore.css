@@ -47,13 +47,13 @@ img {
 .flip-btn.left {
   left: -20px;
   border-width: 20px 25px 20px 0;
-  border-color: transparent #ffc107 transparent transparent;
+  border-color: transparent #000000 transparent transparent;
 }
 
 .flip-btn.right {
   right: -20px;
   border-width: 20px 0 20px 25px;
-  border-color: transparent transparent transparent #ffc107;
+  border-color: transparent transparent transparent #000000;
 }
 
 @media (max-width: 768px) {
