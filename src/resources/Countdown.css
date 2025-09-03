@@ -1,12 +1,13 @@
 .countdown-container {
   text-align: center;
   color: white;
-  padding: 40px 20px;
   background: linear-gradient(to right, #0d0d0d, #313d3d90);
   border-radius: 20px;
-  max-width: 600px;
   margin: auto;
   border: 0.5px solid #fff;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px 16px;
 }
 
 .logo {
@@ -95,4 +96,18 @@
 }
 .pointer:hover {
   color: #ffc107;
+}
+
+@media (max-width: 576px) {
+  .countdown-timer span {
+    font-size: 28px;
+  }
+
+  .countdown-timer small {
+    font-size: 12px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
 }
