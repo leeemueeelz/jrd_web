@@ -16,7 +16,7 @@ const CTA = () => {
 
   <div className="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 mt-3">
     <a
-      href="https://x.com/raccoworld?s=11"
+      href="https://x.com/raccoworld"
       target="_blank"
       rel="noreferrer"
       className="btn btn-outline-warning btn-lg d-inline-flex align-items-center gap-2"
@@ -28,7 +28,7 @@ const CTA = () => {
     </a>
 
     <a
-      href="https://t.me/+FEK_kQpdiXI2ZmJh"
+      href="https://t.me/+WCYpMOutJigyOTU5"
       target="_blank"
       rel="noreferrer"
       className="btn btn-outline-warning btn-lg d-inline-flex align-items-center gap-2"
