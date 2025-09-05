@@ -15,7 +15,7 @@ const Countdown = () => {
 
   const { timeLeft, progress, loading } = useCountdownTimer({
     launchDateUTC: "2025-09-13T05:00:00Z",
-    startDateUTC: "2025-09-02T05:00:00Z",
+    startDateUTC: "2025-09-05T05:00:00Z",
   });
 
   const countryOptions = [

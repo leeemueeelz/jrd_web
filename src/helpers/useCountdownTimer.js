@@ -5,8 +5,8 @@ const useCountdownTimer = ({ launchDateUTC, startDateUTC }) => {
     const [progress, setProgress] = useState(0);
     const [loading, setLoading] = useState(true);
 
-    const launchDate = new Date(Date.UTC(2025, 8, 13, 5, 0, 0)); // 00:00 GMT-5 (Texas)
-    const startDate = new Date(Date.UTC(2025, 7, 30, 5, 0, 0));
+    const launchDate = new Date(launchDateUTC);
+    const startDate = new Date(startDateUTC);
     const totalDuration = launchDate.getTime() - startDate.getTime();
 
     useEffect(() => {
