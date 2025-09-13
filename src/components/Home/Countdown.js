@@ -6,6 +6,7 @@ import { Oval } from '@agney/react-loading';
 import { US, CO, BR, AR, CL, GB, ES } from 'country-flag-icons/react/3x2';
 import Select from 'react-select';
 import useCountdownTimer from '../../helpers/useCountdownTimer';
+import JRDlaunch from '../../resources/images/jrdhrslaunch.jpg'
 
 const Countdown = () => {
   const location = useLocation();
@@ -13,10 +14,10 @@ const Countdown = () => {
   const [closing, setClosing] = useState(false);
   const [selectedTime, setSelectedTime] = useState("");
 
-  const { timeLeft, progress, loading } = useCountdownTimer({
+  /*const { timeLeft, progress, loading } = useCountdownTimer({
     launchDateUTC: "2025-09-13T05:00:00Z",
     startDateUTC: "2025-09-05T05:00:00Z",
-  });
+  });*/
 
   const countryOptions = [
     { value: "15:00", label: <><AR style={{ width: 24 }} /> <span className="ms-2">Argentina</span></> },
@@ -41,19 +42,20 @@ const Countdown = () => {
       <div className="countdown-container levitate m-2">
         <button className="close-button text-warning" onClick={handleClose}>×</button>
         <div className="logo">🚀</div>
-        <h4>September 13, 2025</h4>
-        <p>(GMT-5)</p>
+        {/*<h4>CA: September 13, 2025</h4>
+        <p>(GMT-5)</p>*/}
         <img
-          src={logo}
+          src={JRDlaunch}
           alt="JRD Logo"
           className="mb-1 d-block mx-auto"
-          style={{ width: "120px", height: "auto" }}
+          style={{ width: "100%", height: "auto" }}
         />
         {
-          loading ?  <Oval width="50" color="#ffc107" className="mt-3" /> : 
+          /*loading ?  <Oval width="50" color="#ffc107" className="mt-3" /> : */
         <>
           <div className="mt-4 text-center">
-            <p className="form-label text-light fw-bold">🌍 Choose your country</p>
+            
+            {/*<p className="form-label text-light fw-bold">🌍 Choose your country</p>
             <div className="mx-auto" style={{ maxWidth: 300 }}>
               <Select
                 options={countryOptions}
@@ -88,12 +90,12 @@ const Countdown = () => {
               <p className="mt-2 text-light">
                 🕒 Launch time in your country: <span className="fw-bold text-warning">{selectedTime}</span>
               </p>
-            )}
+            )} */ }
           </div>
 
-          <div className="countdown-timer">
-            <div>
-              <span>{timeLeft.days || 0}</span>
+          {/*<div className="countdown-timer">
+           <div>
+               <span>{timeLeft.days || 0}</span>
               <small>days</small>
             </div>
             <div>
@@ -107,17 +109,17 @@ const Countdown = () => {
             <div>
               <span>{timeLeft.seconds || 0}</span>
               <small>seconds</small>
-            </div>
-          </div>
+            </div> 
+          </div>*/ }
 
           <div className="progress-bar">
             <div
               className="progress-fill"
-              style={{ width: `${Math.floor(progress)}%` }}
+              style={{ width: `99%` /*`${Math.floor(progress)}%`*/ }}
             ></div>
           </div>
           <div className="percent-text d-flex align-items-center justify-content-center gap-2">
-            <span>{Math.floor(progress)}%</span>
+            <span>{99 /*Math.floor(progress)*/}%</span>
             <span className="text-warning">$JRD</span>
           </div>
         </>
