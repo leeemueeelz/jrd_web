@@ -13,7 +13,7 @@ const index = () => {
       <JrdBirth />
       <Roadmap/>
       <CTA />
-      <Countdown/>
+      { /*<Countdown/>*/ }
     </div>
   );
 };
